@@ -1,9 +1,8 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
-a {
-  color: #00B7FF;
+.main-color{
+  color: #ac238d;
 }
 .home-page{
   text-align: center;
@@ -15,10 +14,6 @@ a {
   margin-bottom: .5em;
 }
 /*############# Main Header ################*/
-.navbar{
-  height: 0;
-  background: #000;
-}
 .navbar{
     height: 0;
     background: transparent;
@@ -45,6 +40,25 @@ a {
 .main-view img{
   width: 100%;
   height: 100vh;
+}
+
+.welcome-text{
+  text-align: center;
+  position: absolute;
+  top: 40vh;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  color: #fff;
+  font-size: 3em;
+}
+/************* Media query **************/
+@media (max-width: 992px){
+    .navbar {
+      top: 15px;
+  }
 }
 
 
