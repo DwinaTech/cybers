@@ -14,14 +14,35 @@ body {
   margin-bottom: .5em;
 }
 /*############# Main Header ################*/
-.navbar{
-    height: 0;
-    background: transparent;
-    position: absolute;
-    top: 15px;
-    width: 100%;
-    left: 0;
-    z-index: 1;
+.main-nav{
+  display: flex;
+  width: 100%;
+  height: 0;
+  position: absolute;
+  z-index: 1;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-size: 1.6em;
+}
+.main-nav .main-brand{
+  width: 15%;
+  margin-top: .5em;
+}
+.menu{
+  display: none;
+}
+.main-nav .list{
+  width: 60%;
+  display: flex;
+  margin-top: 1em;
+  min-height: 1.5em;
+  justify-content: flex-end;
+}
+.main-nav .list li{
+  display: inline-block;
+}
+.main-nav .list li a{
+  color: #ddd;
 }
 .main-view{
   position: relative;
@@ -56,8 +77,46 @@ body {
 }
 /************* Media query **************/
 @media (max-width: 992px){
-    .navbar {
-      top: 15px;
+  .main-nav{
+    width: 100%;
+    justify-content: initial;
+    font-size: 1.6em;
+  }
+  .main-nav .main-brand{
+    width: 15%;
+    margin-top: .3em;
+    margin-left: .4em;
+  }
+  .menu{
+    display: block;
+    position: absolute;
+    right: .4em;
+    top: .4em;
+    font-size: 1.5em;
+    color: #fff;
+    background: #000;
+    border-radius: .2em;
+    padding: 0 .2em;
+  }
+  .main-nav .list{
+    width: 100vw;
+    top: 1.5em;
+    margin-top: -11em;
+    transition: all .5s ease-in-out;
+  }
+  .main-nav ul{
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+  .main-nav .list li{
+    display: block;
+    width: 100vw;
+    background: #ac238d;
+    border-bottom: .1em solid #333;
+    text-align: center;
+  }
+  .main-nav .list li a{
+    color: #ddd;
   }
 }
 
