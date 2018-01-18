@@ -38,11 +38,17 @@ body {
   min-height: 1.5em;
   justify-content: flex-end;
 }
+.main-nav .list .btn{
+  padding: 0;
+}
 .main-nav .list li{
   display: inline-block;
 }
 .main-nav .list li a{
-  color: #ddd;
+    color: #ddd;
+    text-decoration: none;
+    padding: .4em 1.5em;
+    display: inline-block;
 }
 .main-view{
   position: relative;
@@ -75,6 +81,14 @@ body {
   color: #fff;
   font-size: 3em;
 }
+.move-down{
+    position: absolute;
+    top: 70vh;
+    left: 48vw;
+    z-index: 3;
+    color: #ac238d;
+    font-size: 2.5em;
+}
 /************** Menus ************/
 .menus{
   background: gray;
@@ -85,6 +99,76 @@ body {
 }
 .menus td .prise-color{
   color: #fff;
+}
+/************* Feedback *****************/
+.feeback{
+  background: #000;
+  color: #fff;
+  padding: 1.5em 0;
+  color: #fff;
+}
+/************ Galary ****************/
+.galary{
+  padding-top: 8em;
+  background: #333;
+  width: 100%;
+  min-height: 100vh;
+  color: #fff;
+  padding-bottom: 1em;
+}
+.galary h1{
+  margin-bottom: 1em;
+}
+.galary .item img{
+  width: 100%;
+  height: 18em;
+  margin-bottom: 2em;
+}
+/************ Contact ****************/
+.contact{
+  padding-top: 8em;
+  background: #333;
+  width: 100%;
+  min-height: 100vh;
+  color: #fff;
+  padding-bottom: 1em;
+}
+.contact form input[type="text"]{
+  margin-bottom: .5em;
+}
+/************ About Us ****************/
+.about{
+  padding-top: 10em;
+  background: #333;
+  width: 100%;
+  min-height: 100vh;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 1em;
+}
+.about img{
+  width: 30%;
+  border-radius: 1em;
+  margin-bottom: .5em;
+}
+/************ Table *************/
+.main-table-header{
+  text-align: center;
+  font-size: 2.5em;
+  font-style: italic;
+  color: #ccc;
+}
+/*================ Footer ====================*/
+.footer{
+    width: 100%;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: .5em 0;
+    margin-top: 0;
+}
+.footer h6{
+    padding-top: .4em;
 }
 /************* Media query **************/
 @media (max-width: 992px){
@@ -128,6 +212,7 @@ body {
   }
   .main-nav .list li a{
     color: #ddd;
+    display: block;
   }
 }
 
