@@ -1,9 +1,21 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const Feedback = require('../models/Feedback');
+const {ObjectId} = require('mongoose')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Cyber Group' });
+  res.render('index',
+    {
+      title: 'Cyber Group',
+    });
+});
+
+/* Post feedback data page. */
+router.post('/', function (req, res, next) {
+  Feedback.create(req.body).then(data => {
+    res.redirect('index');
+  });
 });
 
 /* GET Galary page. */

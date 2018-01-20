@@ -62,7 +62,7 @@ body {
   top: 0;
   left: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, .5);
+  background: rgba(0, 0, 0, .8);
 }
 .main-view img{
   width: 100%;
@@ -90,15 +90,16 @@ body {
     font-size: 2.5em;
 }
 /************** Menus ************/
-.menus{
-  background: gray;
-  padding: 2em 0;
+.main-menus{
+  background: #333;
+  padding: 1em 0;
 }
-.menus td{
-  color: #000;
-}
-.menus td .prise-color{
+.main-menus h1{
   color: #fff;
+}
+.main-menus .carousel-item img{
+  width: 100%;
+  height: 40em;
 }
 /************* Feedback *****************/
 .feeback{
