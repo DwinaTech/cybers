@@ -8,28 +8,31 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <nav class="main-nav">
-      <div class="main-brand main-color">
-        <h1>Cyber</h1>
-      </div>
-      <span class="menu" id="mainMenu">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-      </span>
-      <div class="list" id="mainList">
-        <ul>
-          <li class="btn btn-info">
-            <a href="/">Home</a>
-          </li>
-          <li class="btn btn-info">
-            <a  href="/galary">Galary</a>
-          </li>
-          <li class="btn btn-info">
-            <a href="/contact">Contact</a>
-          </li>
-          <li class="btn btn-info">
-            <a href="/about-us">About us</a>
-          </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">Cyber</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/galary">Galary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about-us">About us</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
        {{{body}}}

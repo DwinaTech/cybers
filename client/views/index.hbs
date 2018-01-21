@@ -19,6 +19,7 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
@@ -1141,7 +1142,7 @@
                 <form method="post">
                     <input type="text" class="form-control" placeholder="Full name" name="name" id="#"></br>
                     <textarea name="message" class="form-control" placeholder="Message" id="" cols="30" rows="10"></textarea></br>
-                    <input type="button" class="btn btn-primary" value="Send">
+                    <input type="submit" class="btn btn-primary" value="Send">
                 </form>
             </div>
         </div>
@@ -1153,10 +1154,13 @@
 <div class="feeback-result">
     <div class="container">
         <div class="row">
-            <div class="col-lg-10 offset-lg-1">
-                <h3>{{name}}</h3>
-                <p>{{message}}</p>
-            </div>
+            {{#each feedbackData}}
+                <div class="col-lg-10 offset-lg-1 message">
+                    <h3>{{this.name}}</h3>
+                    <p>{{this.message}}</p>
+                    <a href="#" class="btn-sm btn-danger">Delete</a>
+                </div>
+            {{/each}}
         </div>
     </div>
 </div>

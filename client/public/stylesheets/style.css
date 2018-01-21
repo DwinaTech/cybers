@@ -14,59 +14,41 @@ body {
   margin-bottom: .5em;
 }
 /*############# Main Header ################*/
-.main-nav{
-  display: flex;
-  width: 100%;
-  height: 0;
-  position: absolute;
-  z-index: 1;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  font-size: 1.6em;
+.navbar{
+    z-index: 1;
+    position: fixed;
+    background: #333;
+    width: 100%;
+    border-bottom: .2em solid #ac238d;
 }
-.main-nav .main-brand{
-  width: 15%;
-  margin-top: .5em;
-}
-.menu{
-  display: none;
-}
-.main-nav .list{
-  width: 60%;
-  display: flex;
-  margin-top: 1em;
-  min-height: 1.5em;
-  justify-content: flex-end;
-}
-.main-nav .list .btn{
-  padding: 0;
-}
-.main-nav .list li{
-  display: inline-block;
-}
-.main-nav .list li a{
-    color: #ddd;
-    text-decoration: none;
-    padding: .4em 1.5em;
-    display: inline-block;
+.navbar-expand-lg .navbar-nav {
+    margin-right: 0 !important;
+    margin: auto;
 }
 .main-view{
   position: relative;
   width: 100%;
   height: 100vh;
+  z-index: 0;
 }
 .main-view .overlay{
-  position: absolute;
-  height: 100%;
+  position: fixed;
+  height: 100vh;
   width: 100%;
   top: 0;
   left: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, .8);
+  z-index: 0;
+  background: rgba(0, 0, 0, .6);
 }
-.main-view img{
-  width: 100%;
-  height: 100vh;
+.main-view >img{
+    width: 100%;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    z-index: -1;
 }
 
 .welcome-text{
@@ -91,7 +73,6 @@ body {
 }
 /************** Menus ************/
 .main-menus{
-  background: #333;
   padding: 1em 0;
 }
 .main-menus h1{
@@ -103,19 +84,39 @@ body {
 }
 /************* Feedback *****************/
 .feeback{
-  background: #000;
   color: #fff;
   padding: 1.5em 0;
   color: #fff;
 }
+.feeback-result{
+  padding: 1em 0;
+}
+.feeback-result .message{
+    background: #000;
+    margin: .5em 0;
+    border-radius: .5em;
+    padding: .5em;
+    color: #fff;
+}
+.feeback-result .message h3{
+    color: #ac238d;
+}
+.feeback-result .message a{
+    float: right;
+    text-decoration: none;
+}
 /************ Galary ****************/
 .galary{
   padding-top: 8em;
-  background: #333;
   width: 100%;
   min-height: 100vh;
   color: #fff;
+  position: relative;
+  background: rgba(0, 0, 0, .8);
   padding-bottom: 1em;
+}
+.galary-header .main-view{
+  height: 0;
 }
 .galary h1{
   margin-bottom: 1em;
@@ -124,28 +125,35 @@ body {
   width: 100%;
   height: 18em;
   margin-bottom: 2em;
+  border-radius: .5em;
 }
 /************ Contact ****************/
 .contact{
   padding-top: 8em;
-  background: #333;
   width: 100%;
   min-height: 100vh;
   color: #fff;
   padding-bottom: 1em;
+}
+.contact-header .main-view{
+  height: 0;
 }
 .contact form input[type="text"]{
   margin-bottom: .5em;
 }
 /************ About Us ****************/
 .about{
-  padding-top: 10em;
-  background: #333;
+  padding-top: 6em;
   width: 100%;
   min-height: 100vh;
-  color: #fff;
+  color: #bbb;
+  background: rgba(0, 0, 0, .6);
   text-align: center;
   padding-bottom: 1em;
+  position: relative
+}
+.about-header .main-view{
+  height: 0;
 }
 .about img{
   width: 30%;
@@ -178,6 +186,9 @@ body {
     justify-content: initial;
     font-size: 1.6em;
   }
+  .navbar-expand-lg .navbar-nav li{
+    text-align: center;
+  }
   .main-nav .main-brand{
     width: 15%;
     margin-top: .3em;
@@ -190,7 +201,6 @@ body {
     top: .4em;
     font-size: 1.5em;
     color: #fff;
-    background: #000;
     border-radius: .2em;
     padding: 0 .2em;
   }
