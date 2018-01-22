@@ -304,7 +304,7 @@
                             <tr class="main-table-header">
                                 <th scope="col"></th>
                                 <th scope="col"></th>
-                                <th scope="col">Second Week</th>
+                                <th scope="col">Week Two</th>
                                 <th scope="col"></th>
                                 <th scope="col"></th>
                             </tr>
@@ -1140,8 +1140,8 @@
             <div class="col-lg-10 offset-lg-1">
                 <h1>Leaver your feedback here please</h1>
                 <form method="post">
-                    <input type="text" class="form-control" placeholder="Full name" name="name" id="#"></br>
-                    <textarea name="message" class="form-control" placeholder="Message" id="" cols="30" rows="10"></textarea></br>
+                    <input type="text" value="{{ this.editFeedback.name}}" class="form-control" placeholder="Full name" name="name" id="#"></br>
+                    <textarea name="message" class="form-control" placeholder="Message" id="" cols="30" rows="10">{{ this.editFeedback.message}}</textarea></br>
                     <input type="submit" class="btn btn-primary" value="Send">
                 </form>
             </div>
@@ -1158,7 +1158,8 @@
                 <div class="col-lg-10 offset-lg-1 message">
                     <h3>{{this.name}}</h3>
                     <p>{{this.message}}</p>
-                    <a href="#" class="btn-sm btn-danger">Delete</a>
+                    <a href="/delete/{{this._id}}" class="btn-sm btn-danger">Delete</a>
+                    <a href="/edit/{{this._id}}" class="btn-sm btn-info">Edit</a>
                 </div>
             {{/each}}
         </div>
