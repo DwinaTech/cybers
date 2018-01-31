@@ -50,23 +50,21 @@ router.get('/delete/:feedbackId', function (req, res, next) {
 });
 
 /* Update page. */
+/* GET Galary page. */
 router.get('/edit/:feedbackId', function (req, res, next) {
-  const feedbackId  = req.params.feedbackId;
-  Feedback.findById(feedbackId).exec((err, editFeedback) => {
-    if (err) {
-      console.log(err);
-    }
-        res.render('/editFeedback', {
-          editFeedback
-        });
-      }).catch(next)
+  const {feedbackId} = req.params;
+  Feedback.findById(feedbackId).exec((err, feedbackData) => {
+    res.render('index', {
+      feedbackData
+    });
+  })
 });
 
 router.post('/edit/:feedbackId', function (req, res, next) {
   const { feedbackId } = req.params;
-  Feedback.findByIdAndUpdate(feedbackId, req.body, (editFeedback) => {
-    res.render('/');
-  })
+  Feedback.findByIdAndUpdate(feedbackId,req.body).then(data => {
+    res.redirect('/');
+  });
 });
 
 module.exports = router;
