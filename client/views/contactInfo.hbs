@@ -1,0 +1,29 @@
+
+<div class="contact-info">
+    <div class="contain">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <h1>Users info</h1>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Email address</th>
+                            <th>Message</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each user}}
+                        <tr>
+                            <td class="bg-success">{{this.name}}</td>
+                            <td class="bg-info">{{this.email}}</td>
+                            <td class="bg-success">{{this.message}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
