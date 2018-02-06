@@ -1,0 +1,13 @@
+<div class="feeback-result mangeFeedback">
+    <div class="container">
+        <div class="row">
+            {{#each feedbackData}}
+                <div class="col-lg-10 offset-lg-1 message">
+                <h3>{{ this.name }}</h3>
+                <p>{{ this.message }}</p>
+                <a href="/delete/{{this._id}}" class="btn-sm btn-danger">Delete</a>
+            </div>
+            {{/ each}}
+        </div>
+    </div>
+</div>

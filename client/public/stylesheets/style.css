@@ -128,12 +128,13 @@ body {
 .feeback-result .message h3{
     color: #ac238d;
 }
-.feeback-result .message>a{
-    margin-right: .5em;
-}
 .feeback-result .message a{
     float: right;
     text-decoration: none;
+}
+.mangeFeedback{
+  padding: 5em 0 2em 0;
+  background: gray;
 }
 /*********** Contact Info ***********/
 .contact-info{

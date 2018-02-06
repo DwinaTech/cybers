@@ -13,7 +13,14 @@ router.get('/', function (req, res, next) {
       feedbackData
     })
   });
-});  
+}); 
+router.get('/admin', function (req, res, next) {
+  Feedback.find({}, (err, feedbackData) => {
+    res.render('mangeFeedback', {
+      feedbackData
+    })
+  });
+}); 
 
 /* Post feedback data page. */
 router.post('/', function (req, res, next) {
