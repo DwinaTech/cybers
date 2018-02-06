@@ -3,10 +3,12 @@ const { Schema } = require('mongoose');
 
 const schema = new Schema({
     name: {
-        type: String
+        type: String,
+        required: true
     },
     message: {
-        type: String
+        type: String,
+        required: true
     }
 })
 
