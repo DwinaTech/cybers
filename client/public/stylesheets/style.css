@@ -1,5 +1,5 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 .main-color{
   color: #ac238d;
@@ -111,18 +111,25 @@ body {
   padding: 1.5em 0;
   color: #fff;
 }
+.feeback h1{
+  padding-bottom: 1em;
+  color: #ac238d;
+}
 .feeback-result{
   padding: 1em 0;
 }
 .feeback-result .message{
-    background: #000;
-    margin: .5em 0;
+    background: rgba(0, 0, 0, .6);
+    margin-top: .8em;
     border-radius: .5em;
     padding: .5em;
     color: #fff;
 }
 .feeback-result .message h3{
     color: #ac238d;
+}
+.feeback-result .message>a{
+    margin-right: .5em;
 }
 .feeback-result .message a{
     float: right;
@@ -135,8 +142,16 @@ body {
   color: #ddd;
   margin-bottom: .5em;
 }
-.contact-info h1{
+.contact-text{
+  text-align: center;
+}
+.contact-text h1{
   padding-bottom: .4em;
+  color: #ac238d;
+}
+.contact-text p{
+  padding: 0 3em 1em 3em;
+  font-size: 1.5em;
 }
 /************ Galary ****************/
 .galary{
@@ -153,9 +168,11 @@ body {
 }
 .galary h1{
   margin-bottom: 1em;
+  color: #ac238d;
 }
 .galary .item img{
   width: 100%;
+  color: #ac238d;
   height: 18em;
   margin-bottom: 2em;
   border-radius: .5em;
@@ -185,6 +202,9 @@ body {
   padding-bottom: 1em;
   position: relative
 }
+.about h1{
+  color: #ac238d;
+}
 .about-header .main-view{
   height: 0;
 }
@@ -193,12 +213,29 @@ body {
   border-radius: 1em;
   margin-bottom: .5em;
 }
+
+.about p{
+  padding: 0 3em 1em 3em;
+  font-size: 1.5em;
+}
 /************ Table *************/
 .main-table-header{
   text-align: center;
   font-size: 2.5em;
   font-style: italic;
   color: #ccc;
+}
+/******************* Edit Feedback **********************/
+.edit-feedback{
+  background: #333;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+.edit-feedback .feedback-title{
+  padding-bottom: .5em;
+  color: #ac238d;
 }
 /*================ Footer ====================*/
 .footer{
@@ -261,6 +298,12 @@ body {
   .main-slide{
     display: none;
   }
+  .contact-text p{
+  padding: 0;
+}
+.about p{
+  padding: 0;
+}
 }
 
 

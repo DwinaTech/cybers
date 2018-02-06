@@ -54,7 +54,7 @@ router.get('/delete/:feedbackId', function (req, res, next) {
 router.get('/edit/:feedbackId', function (req, res, next) {
   const {feedbackId} = req.params;
   Feedback.findById(feedbackId).exec((err, feedbackData) => {
-    res.render('index', {
+    res.render('editFeedback', {
       feedbackData
     });
   })
