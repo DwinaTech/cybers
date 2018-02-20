@@ -116,7 +116,7 @@ body {
   color: #ac238d;
 }
 .feeback-result{
-  padding: 1em 0;
+  padding: 1em 0 5em 0;
 }
 .feeback-result .message{
     background: rgba(0, 0, 0, .6);
@@ -162,7 +162,7 @@ body {
   color: #fff;
   position: relative;
   background: rgba(0, 0, 0, .8);
-  padding-bottom: 1em;
+  padding-bottom: 3em;
 }
 .galary-header .main-view{
   height: 0;
