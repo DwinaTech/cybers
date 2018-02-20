@@ -31,12 +31,12 @@ router.post('/', function (req, res, next) {
 
 /* GET Galary page. */
 router.get('/galary', function (req, res, next) {
-  res.render('galary', { title: "Cyber Canteen's galary" });
+  res.render('galary', { title: "GCC Anniesland's gallery" });
 });
 
 /* GET Contact page. */
 router.get('/contact', function (req, res, next) {
-  res.render('contact', {title: "Cyber Group's contact" });
+  res.render('contact', {title: "GCC Anniesland's contact" });
 });
 
 /* GET About us page. */
