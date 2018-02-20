@@ -177,6 +177,10 @@ body {
   height: 18em;
   margin-bottom: 2em;
   border-radius: .5em;
+  transition: all .8s ease-in-out
+}
+.galary .item img:hover{
+  transform: scale(1.09);
 }
 /************ Contact ****************/
 .contact{

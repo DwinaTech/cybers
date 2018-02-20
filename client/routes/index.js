@@ -31,7 +31,7 @@ router.post('/', function (req, res, next) {
 
 /* GET Galary page. */
 router.get('/galary', function (req, res, next) {
-  res.render('galary', { title: "Cyber Group's galary" });
+  res.render('galary', { title: "Cyber Canteen's galary" });
 });
 
 /* GET Contact page. */
